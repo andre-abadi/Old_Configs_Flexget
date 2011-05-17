@@ -1,0 +1,9 @@
+This is the author's working copy of a FlexGet configuration file.
+
+On a user's system, it would be found int ~/.flexget/config.yml.
+Also known as /home/users_name/.flexget/config.yml.
+
+The aim of this configuration file is to automate the download
+and sorting of all of the author's desired TV shows. It is a work
+in progress and is provided as a guide to others with no claim
+to brilliance nor assumption of accuracy.
