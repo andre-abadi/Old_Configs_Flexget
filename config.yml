@@ -1,0 +1,112 @@
+presets:
+
+  tvtorrent:
+    deluge:
+      content_filename: '%(series_name)s - %(series_id)s'
+      movedone: /md0/series/%(series_name)s/Season %(series_season)d/
+      main_file_only: yes
+      queuetotop: yes
+      automanaged: true
+
+  showexists:
+    exists_series: /md0/series/
+
+feeds:
+ 
+# Working as of 13/05/2011
+  The Big Bang Theory:
+    rss: http://showrss.karmorra.info/feeds/5.rss
+    series:
+      - The Big Bang Theory
+    preset:
+      - tvtorrent
+      - showexists
+
+# Working as of 13/05/2011
+  Grey's Anatomy:
+    rss: http://showrss.karmorra.info/feeds/34.rss
+    series:
+      - Grey's Anatomy
+    preset:
+      - tvtorrent
+      - showexists
+
+# Working as of 13/05/2011
+  Modern Family:
+    rss: http://showrss.karmorra.info/feeds/221.rss
+    series:
+      - Modern Family
+    preset:
+      - tvtorrent
+      - showexists
+
+# Show to return in 2012; feed is slightly outdated
+# Only gets to S04E01 when it should have been up to S04E06 
+  Packed to the Rafters:
+    rss: http://showrss.karmorra.info/feeds/203.rss
+    series:
+      - Packed to the Rafters
+    preset:
+      - tvtorrent
+      - showexists
+
+# Working as of 13/05/2011
+  Gossip Girl:
+    rss: http://showrss.karmorra.info/feeds/32.rss
+    series:
+      - Gossip Girl
+    preset:
+      - tvtorrent
+      - showexists
+
+# Working as of 17/05/2011
+  How I Met Your Mother:
+    rss: http://showrss.karmorra.info/feeds/37.rss
+    series:
+      - How I Met Your Mother
+    preset:
+      - tvtorrent
+      - showexists
+# Working as of 17/05/2011
+  Glee:
+    rss: http://showrss.karmorra.info/feeds/31.rss
+    series:
+      - Glee
+    preset:
+      - tvtorrent
+      - showexists
+
+# Working as of 17/05/2011
+  Bones:
+    rss: http://showrss.karmorra.info/feeds/6.rss
+    series:
+      - Bones
+    preset:
+      - tvtorrent
+      - showexists
+
+# Working as of 17/05/2011
+  Castle:
+    rss: http://showrss.karmorra.info/feeds/109.rss
+    series:
+      - Castle
+    preset:
+      - tvtorrent
+      - showexists
+
+# Working as of 17/05/2011
+  Cops:
+    rss: http://showrss.karmorra.info/feeds/125.rss
+    series:
+      - Cops
+    preset:
+      - tvtorrent
+      - showexists
+# Working as of 17/05/2011
+  MythBusters:
+    rss: http://showrss.karmorra.info/feeds/46.rss
+    series:
+      - MythBusters
+    preset:
+      - tvtorrent
+      - showexists
