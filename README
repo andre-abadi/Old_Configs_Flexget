@@ -7,3 +7,9 @@ The aim of this configuration file is to automate the download
 and sorting of all of the author's desired TV shows. It is a work
 in progress and is provided as a guide to others with no claim
 to brilliance nor assumption of accuracy.
+
+The author uses the Deluge BitTorrent program on a headless server
+running as a daemon process. It feeds finished files into a RAID5
+array in the series folder, shown as /md0/series/ above.
+
+Shows and their seasons are structured as Show/Season N/*
