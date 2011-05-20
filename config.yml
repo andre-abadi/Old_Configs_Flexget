@@ -110,7 +110,7 @@ feeds:
     preset:
       - tvtorrent
       - showexists
-
+# Working as of 20/05/2011
   Mad Men:
     rss: http://showrss.karmorra.info/feeds/42.rss
     series:
