@@ -120,3 +120,11 @@ feeds:
     preset:
       - tvtorrent
       - showexists
+# Not working as of 06/06/2011: no torrents at end of link
+  Doctor Who:
+    rss: http://showrss.karmorra.info/feeds/103.rss
+    series:
+      - Doctor Who
+    preset:
+      - tvtorrent
+      - showexists
