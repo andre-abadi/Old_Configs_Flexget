@@ -129,3 +129,21 @@ feeds:
 #    preset:
 #      - tvtorrent
 #      - showexists
+
+#Working as of 28/06/2011
+  NCIS:
+    rss: http://showrss.karmorra.info/feeds/47.rss
+    series:
+      - NCIS
+    preset:
+      - tvtorrent
+      - showexists
+
+#Working as of 28/06/2011
+  Man vs. Wild:
+    rss: http://showrss.karmorra.info/feeds/126.rss
+    series:
+      - Man vs. Wild
+    preset:
+      - tvtorrent
+      - showexists
