@@ -147,3 +147,29 @@ feeds:
     preset:
       - tvtorrent
       - showexists
+
+#Working as of 7/08/2011
+  Top Gear:
+    rss: http://showrss.karmorra.info/feeds/117.rss
+    series:
+      - Top Gear
+    preset:
+      - tvtorrent
+      - showexists
+#Working as of 17/08/2011 but no new shows
+  QI:
+    rss: http://showrss.karmorra.info/feeds/240.rss
+    series:
+      - QI
+    preset:
+      - tvtorrent
+      - showexists
+
+#Working as of 17/08/2011
+  Law & Order UK:
+    rss: http://showrss.karmorra.info/feeds/244.rss
+    series:
+      - Law & Order UK
+    preset:
+      - tvtorrent
+      - showexists
