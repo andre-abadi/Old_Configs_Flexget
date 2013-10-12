@@ -1,15 +1,23 @@
+# Feeds from http://showrss.info/?cs=feeds
+# Related http://dancingborg.blogspot.com.au/2011/06/ubuntu-file-server-part-12-flexget.html
+
 presets:
 
   tvtorrent:
     deluge:
       content_filename: '%(series_name)s - %(series_id)s'
-      movedone: /md0/series/%(series_name)s/Season %(series_season)d/
+      movedone: /media/PNY/series/%(series_name)s/Season %(series_season)d/
       main_file_only: yes
       queuetotop: yes
       automanaged: true
+      user: username
+      pass: password
 
   showexists:
-    exists_series: /md0/series/
+    exists_series: /media/PNY/TV Shows
+
+  sdtv:
+    quality: hdtv <720p
 
 tasks:
  
@@ -31,14 +39,15 @@ tasks:
       - tvtorrent
       - showexists
 
-# Working as of 13/05/2011
+# Working as of 12/10/2013
   Modern Family:
-    rss: http://showrss.karmorra.info/feeds/221.rss
+    rss: http://showrss.info/feeds/221.rss
     series:
       - Modern Family
     preset:
       - tvtorrent
       - showexists
+      - sdtv
 
 # Show to return in 2012; feed is slightly outdated
 # Only gets to S04E01 when it should have been up to S04E06 
