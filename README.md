@@ -9,13 +9,3 @@ The aim of this configuration file is to automate the download and sorting of al
 The author uses the Deluge BitTorrent program on a headless Raspberry Pi Model B running as a daemon process.
 
 The Pi connects via NFS to an exported TV Show directory 'Series' hosted on a Synology DS1812+
-
-Shows and their seasons are structured as follows:
-
-###Modern Family
-####Season 1
-####Season 2
-####Season 3
-####Season 4
-####Season 5
-#####Modern Family S05E01.avi
