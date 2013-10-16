@@ -13,32 +13,88 @@ presets:
       automanaged: true
       user: deluge
       pass: deluge
-
-  showexists:
-    exists_series: /media/Series/
-
-  sdtv:
     quality: hdtv <720p
+    exists_series: /media/Series/
 
 tasks:
 
-# Working as of 12/10/2013
+# Working 16/10/2013
   Modern Family:
     rss: http://showrss.info/feeds/221.rss
     series:
       - Modern Family
     preset:
       - tvtorrent
-      - showexists
-      - sdtv
 
-# Working as of 16/10/2013
+# Working 16/10/2013
   Suits:
     rss: http://showrss.info/feeds/367.rss
     series:
       - Suits
     preset:
       - tvtorrent
-      - showexists
-      - sdtv
 
+# Working 16/10/2013
+  Castle (2009):
+    rss: http://showrss.info/feeds/109.rss
+    series:
+      - Castle (2009)
+    preset:
+      - tvtorrent
+
+# Working 16/10/2013
+  Downton Abbey:
+    rss: http://showrss.info/feeds/383.rss
+    series:
+      - Downton Abbey
+    preset:
+      - tvtorrent
+
+# RSS feed gets 404 as of 16/10/2013
+#  Game of Thrones:
+#    rss: http://showrss.info/feeds/350.rss
+#    series:
+#      - Game of Thrones
+#    preset:
+#      - tvtorrent
+
+
+# Working 16/10/2013
+  Grey's Anatomy:
+    rss: http://showrss.info/feeds/34.rss
+    series:
+      - Grey's Anatomy
+    preset:
+      - tvtorrent
+
+# Working 16/10/2013
+  How I Met Your Mother:
+    rss: http://showrss.info/feeds/37.rss
+    series:
+      - How I Met Your Mother
+    preset:
+      - tvtorrent
+
+# Working 16/10/2013
+  Mad Men:
+    rss: http://showrss.info/feeds/42.rss
+    series:
+      - Mad Men
+    preset:
+      - tvtorrent
+
+# Working 16/10/2013
+  The Blacklist:
+    rss: http://showrss.info/feeds/609.rss
+    series:
+      - The Blacklist
+    preset:
+      - tvtorrent
+
+# Working 16/10/2013
+  The Big Bang Theory:
+    rss: http://showrss.info/feeds/5.rss
+    series:
+      - The Big Bang Theory
+    preset:
+      - tvtorre
