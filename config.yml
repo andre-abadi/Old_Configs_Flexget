@@ -4,9 +4,10 @@
 presets:
 
   tvtorrent:
+    magnets: no
     deluge:
       content_filename: '%(series_name)s - %(series_id)s'
-      movedone: /media/Series/%(series_name)/Season %(series_season)/
+      movedone: /media/Series/%(series_name)s/Season %(series_season)d/
       main_file_only: yes
       queuetotop: yes
       automanaged: true
@@ -26,6 +27,16 @@ tasks:
     rss: http://showrss.info/feeds/221.rss
     series:
       - Modern Family
+    preset:
+      - tvtorrent
+      - showexists
+      - sdtv
+
+# Working as of 16/10/2013
+  Suits:
+    rss: http://showrss.info/feeds/367.rss
+    series:
+      - Suits
     preset:
       - tvtorrent
       - showexists
