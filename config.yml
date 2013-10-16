@@ -51,12 +51,12 @@ tasks:
       - tvtorrent
 
 # RSS feed gets 404 as of 16/10/2013
-#  Game of Thrones:
-#    rss: http://showrss.info/feeds/350.rss
-#    series:
-#      - Game of Thrones
-#    preset:
-#      - tvtorrent
+  Game of Thrones:
+    rss: http://showrss.info/feeds/350.rss
+    series:
+      - Game of Thrones
+    preset:
+      - tvtorrent
 
 
 # Working 16/10/2013
@@ -96,5 +96,37 @@ tasks:
     rss: http://showrss.info/feeds/5.rss
     series:
       - The Big Bang Theory
+    preset:
+      - tvtorrent
+
+# Working?
+  America's Next Top Model:
+    rss: http://showrss.info/feeds/113.rss
+    series:
+      - America's Next Top Model
+    preset:
+      - tvtorrent
+
+# Working?
+  Boardwalk Empire:
+    rss: http://showrss.info/feeds/292.rss
+    series:
+      - Boardwalk Empire
+    preset:
+      - tvtorrent
+
+# Working?
+  Girls:
+    rss: http://showrss.info/feeds/444.rss
+    series:
+      - Girls
+    preset:
+      - tvtorrent
+
+# Working?
+  Homeland:
+    rss: http://showrss.info/feeds/400.rss
+    series:
+      - Homeland
     preset:
       - tvtorrent
