@@ -99,7 +99,7 @@ tasks:
     preset:
       - tvtorrent
 
-# Working?
+# Working 19/10/2013
   America's Next Top Model:
     rss: http://showrss.info/feeds/113.rss
     series:
@@ -107,7 +107,7 @@ tasks:
     preset:
       - tvtorrent
 
-# Working?
+# Working 19/10/2013
   Boardwalk Empire:
     rss: http://showrss.info/feeds/292.rss
     series:
@@ -115,15 +115,7 @@ tasks:
     preset:
       - tvtorrent
 
-# Working?
-  Girls:
-    rss: http://showrss.info/feeds/444.rss
-    series:
-      - Girls
-    preset:
-      - tvtorrent
-
-# Working?
+# Working 19/10/2013
   Homeland:
     rss: http://showrss.info/feeds/400.rss
     series:
