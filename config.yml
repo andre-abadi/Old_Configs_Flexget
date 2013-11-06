@@ -11,8 +11,8 @@ presets:
       main_file_only: yes
       queuetotop: yes
       automanaged: true
-      user: deluge
-      pass: deluge
+      user: osiris
+      pass: osiris
     quality: hdtv <720p
     exists_series: /media/Series/
 
@@ -120,5 +120,13 @@ tasks:
     rss: http://showrss.info/feeds/400.rss
     series:
       - Homeland
+    preset:
+      - tvtorrent
+
+# Working 6/11/2013
+  Elementary:
+    rss: http://showrss.info/feeds/485.rss
+    series:
+      - Elementary
     preset:
       - tvtorrent
