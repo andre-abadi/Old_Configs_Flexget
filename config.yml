@@ -4,18 +4,19 @@
 presets:
 
   tvtorrent:
+    exists_series: /media/Series/
+    quality: hdtv <720p
     magnets: no
     deluge:
-      content_filename: '%(series_name)s - %(series_id)s'
-      movedone: /media/Series/%(series_name)s/Season %(series_season)d/
-      main_file_only: yes
-      queuetotop: yes
-      automanaged: true
       user: osiris
       pass: osiris
-    quality: hdtv <720p
-    exists_series: /media/Series/
-
+      main_file_only: yes
+      automanaged: true
+      content_filename: '%(series_name)s - %(series_id)s'
+      movedone: /media/Series/%(series_name)s/Season %(series_season)d/
+      ratio: 0.0001
+      removeatratio: yes
+      
 tasks:
 
 # Working 16/10/2013
@@ -128,5 +129,13 @@ tasks:
     rss: http://showrss.info/feeds/485.rss
     series:
       - Elementary
+    preset:
+      - tvtorrent
+
+# Working 10/01/2014
+  Scandal (2012):
+    rss: http://showrss.info/feeds/439.rss
+    series:
+      - Scandal (2012)
     preset:
       - tvtorrent
