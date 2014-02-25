@@ -16,7 +16,7 @@ presets:
       movedone: /media/Series/%(series_name)s/Season %(series_season)d/
       ratio: 0.0001
       removeatratio: yes
-      
+ 
 tasks:
 
 # Working 16/10/2013
