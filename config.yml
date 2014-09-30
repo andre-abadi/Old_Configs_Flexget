@@ -16,9 +16,33 @@ presets:
       movedone: /media/Series/%(series_name)s/Season %(series_season)d/
       ratio: 0.0001
       removeatratio: yes
- 
+
+  movie:
+    exists_movie: /media/MoviesHD/
+    quality: hdtv+ 1080p
+    deluge:
+      user: osiris
+      pass: osiris
+      automanaged: true
+      content_filename: "{{imdb_name}} ({{imdb_year}})"
+      movedone: /media/MoviesHD/
+      ratio: 0.0001
+      removeatratio: yes
+
 tasks:
 
+# Working 19/08/2014
+  ThePirateBay:
+    html:
+      url: http://thepiratebay.se/browse/207/0/7/0
+    limit_new: 1
+    interval: 1 days
+    imdb:
+      min_score: 7
+      min_votes: 5000
+    preset:
+      - movie
+ 
 # Working 16/10/2013
   Modern Family:
     rss: http://showrss.info/feeds/221.rss
@@ -137,5 +161,21 @@ tasks:
     rss: http://showrss.info/feeds/439.rss
     series:
       - Scandal (2012)
+    preset:
+      - tvtorrent
+
+# Working 30/09/2014
+  House of Cards (2013):
+    rss: http://showrss.info/feeds/541.rss
+    series:
+      - House of Cards (2013)
+    preset:
+      - tvtorrent
+
+# Working 30/09/2014
+  Glee:
+    rss: http://showrss.info/feeds/31.rss
+    series:
+      - Glee
     preset:
       - tvtorrent
