@@ -19,10 +19,11 @@ presets:
 
   movie:
     exists_movie: /media/MoviesHD/
-    quality: hdtv+ 1080p
+    quality: 1080p
     deluge:
       user: osiris
       pass: osiris
+      main_file_only: yes
       automanaged: true
       content_filename: "{{imdb_name}} ({{imdb_year}})"
       movedone: /media/MoviesHD/
@@ -31,18 +32,22 @@ presets:
 
 tasks:
 
-# Working 19/08/2014
-  ThePirateBay:
-    html:
-      url: http://thepiratebay.se/browse/207/0/7/0
-    limit_new: 1
-    interval: 1 days
+# Working 12/01/2015
+  YTS:
+    rss: http://yts.re/rss/0/1080p/All/7
+    accept_all: yes
+    seen_movies: strict
+    imdb_required: yes
     imdb:
       min_score: 7
-      min_votes: 5000
+      reject_genres:
+        - horror
+        - documentary
+    limit_new: 1
+    interval: 1 days
     preset:
       - movie
- 
+
 # Working 16/10/2013
   Modern Family:
     rss: http://showrss.info/feeds/221.rss
