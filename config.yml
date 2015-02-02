@@ -32,21 +32,20 @@ presets:
 
 tasks:
 
-# Working 12/01/2015
-  YTS:
-    rss: http://yts.re/rss/0/1080p/All/7
-    accept_all: yes
-    seen_movies: strict
-    imdb_required: yes
-    imdb:
-      min_score: 7
-      reject_genres:
-        - horror
-        - documentary
-    limit_new: 1
-    interval: 1 days
-    preset:
-      - movie
+#Working 12/01/2015
+#  YTS:
+#    rss: http://yts.re/rss/0/1080p/All/7
+#    accept_all: yes
+#    seen_movies: strict
+#    imdb_required: yes
+#    imdb:
+#      reject_genres:
+#        - horror
+#        - documentary
+#    limit_new: 1
+#    interval: 1 days
+#    preset:
+#      - movie
 
 # Working 16/10/2013
   Modern Family:
