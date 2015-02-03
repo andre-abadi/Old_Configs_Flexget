@@ -1,11 +1,7 @@
-# Feeds from http://showrss.info/?cs=feeds
-# Related http://dancingborg.blogspot.com.au/2011/06/ubuntu-file-server-part-12-flexget.html
-
 presets:
 
   tvtorrent:
     exists_series: /media/Series/
-    quality: hdtv <720p
     magnets: no
     deluge:
       user: osiris
@@ -19,11 +15,9 @@ presets:
 
   movie:
     exists_movie: /media/MoviesHD/
-    quality: 1080p
     deluge:
       user: osiris
       pass: osiris
-      main_file_only: yes
       automanaged: true
       content_filename: "{{imdb_name}} ({{imdb_year}})"
       movedone: /media/MoviesHD/
@@ -32,154 +26,42 @@ presets:
 
 tasks:
 
-#Working 12/01/2015
-#  YTS:
-#    rss: http://yts.re/rss/0/1080p/All/7
-#    accept_all: yes
-#    seen_movies: strict
-#    imdb_required: yes
-#    imdb:
-#      reject_genres:
-#        - horror
-#        - documentary
-#    limit_new: 1
-#    interval: 1 days
-#    preset:
-#      - movie
-
-# Working 16/10/2013
-  Modern Family:
-    rss: http://showrss.info/feeds/221.rss
+  showRSS:
+    rss: http://showrss.info/rss.php?user_id=227669&hd=0&proper=1&magnets=false
     series:
       - Modern Family
-    preset:
-      - tvtorrent
-
-# Working 16/10/2013
-  Suits:
-    rss: http://showrss.info/feeds/367.rss
-    series:
       - Suits
-    preset:
-      - tvtorrent
-
-# Working 16/10/2013
-  Castle (2009):
-    rss: http://showrss.info/feeds/109.rss
-    series:
       - Castle (2009)
-    preset:
-      - tvtorrent
-
-# Working 16/10/2013
-  Downton Abbey:
-    rss: http://showrss.info/feeds/383.rss
-    series:
       - Downton Abbey
-    preset:
-      - tvtorrent
-
-# RSS feed gets 404 as of 16/10/2013
-  Game of Thrones:
-    rss: http://showrss.info/feeds/350.rss
-    series:
       - Game of Thrones
-    preset:
-      - tvtorrent
-
-
-# Working 16/10/2013
-  Grey's Anatomy:
-    rss: http://showrss.info/feeds/34.rss
-    series:
       - Grey's Anatomy
-    preset:
-      - tvtorrent
-
-# Working 16/10/2013
-  How I Met Your Mother:
-    rss: http://showrss.info/feeds/37.rss
-    series:
       - How I Met Your Mother
-    preset:
-      - tvtorrent
-
-# Working 16/10/2013
-  Mad Men:
-    rss: http://showrss.info/feeds/42.rss
-    series:
       - Mad Men
-    preset:
-      - tvtorrent
-
-# Working 16/10/2013
-  The Blacklist:
-    rss: http://showrss.info/feeds/609.rss
-    series:
       - The Blacklist
-    preset:
-      - tvtorrent
-
-# Working 16/10/2013
-  The Big Bang Theory:
-    rss: http://showrss.info/feeds/5.rss
-    series:
       - The Big Bang Theory
-    preset:
-      - tvtorrent
-
-# Working 19/10/2013
-  America's Next Top Model:
-    rss: http://showrss.info/feeds/113.rss
-    series:
       - America's Next Top Model
-    preset:
-      - tvtorrent
-
-# Working 19/10/2013
-  Boardwalk Empire:
-    rss: http://showrss.info/feeds/292.rss
-    series:
       - Boardwalk Empire
-    preset:
-      - tvtorrent
-
-# Working 19/10/2013
-  Homeland:
-    rss: http://showrss.info/feeds/400.rss
-    series:
       - Homeland
-    preset:
-      - tvtorrent
-
-# Working 6/11/2013
-  Elementary:
-    rss: http://showrss.info/feeds/485.rss
-    series:
       - Elementary
-    preset:
-      - tvtorrent
-
-# Working 10/01/2014
-  Scandal (2012):
-    rss: http://showrss.info/feeds/439.rss
-    series:
       - Scandal (2012)
-    preset:
-      - tvtorrent
-
-# Working 30/09/2014
-  House of Cards (2013):
-    rss: http://showrss.info/feeds/541.rss
-    series:
       - House of Cards (2013)
+      - Glee
+      - MythBusters
+      - Sherlock
+      - Top Gear
     preset:
       - tvtorrent
 
-# Working 30/09/2014
-  Glee:
-    rss: http://showrss.info/feeds/31.rss
-    series:
-      - Glee
+  YTS:
+    rss: http://yts.re/rss/0/1080p/All/7
+    accept_all: yes
+    seen_movies: strict
+    imdb_required: yes
+    imdb:
+      reject_genres:
+        - horror
+        - documentary
+    limit_new: 1
+    interval: 1 days
     preset:
-      - tvtorrent
+      - movie
