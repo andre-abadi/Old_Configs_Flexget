@@ -12,18 +12,6 @@ templates:
       movedone: /media/Series/%(series_name)s/Season %(series_season)d/
       ratio: 0.0001
       removeatratio: yes
-
-  movie:
-    exists_movie: /media/MoviesHD/
-    deluge:
-      user: osiris
-      pass: osiris
-      automanaged: true
-      content_filename: "{{imdb_name}} ({{imdb_year}})"
-      movedone: /media/MoviesHD/
-      ratio: 0.0001
-      removeatratio: yes
-
 tasks:
 
   showRSS:
@@ -51,17 +39,3 @@ tasks:
       - Top Gear
     template:
       - tvtorrent
-
-  YTS:
-    rss: http://yts.re/rss/0/1080p/All/7
-    accept_all: yes
-    seen_movies: strict
-    imdb_required: yes
-    imdb:
-      reject_genres:
-        - horror
-        - documentary
-    limit_new: 1
-    interval: 1 days
-    template:
-      - movie
