@@ -4,9 +4,12 @@ templates:
     exists_series: /media/Series/
     magnets: no
     deluge:
-      user: osiris
-      pass: osiris
+      username: osiris
+      password: osiris
       main_file_only: yes
+      main_file_ratio: 0.85
+      hide_sparse_files: no
+      keep_subs: no
       automanaged: true
       content_filename: '%(series_name)s - %(series_id)s'
       movedone: /media/Series/%(series_name)s/Season %(series_season)d/
@@ -15,7 +18,7 @@ templates:
 tasks:
 
   showRSS:
-    rss: http://showrss.info/rss.php?user_id=227669&hd=0&proper=1&magnets=false
+    rss: http://showrss.info/rss.php?user_id=227669&hd=null&proper=1&magnets=false
     series:
       - Modern Family
       - Suits
