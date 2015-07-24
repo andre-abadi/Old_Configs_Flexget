@@ -1,4 +1,4 @@
-presets:
+templates:
 
   tvtorrent:
     exists_series: /media/Series/
@@ -49,7 +49,7 @@ tasks:
       - MythBusters
       - Sherlock
       - Top Gear
-    preset:
+    template:
       - tvtorrent
 
   YTS:
@@ -63,5 +63,5 @@ tasks:
         - documentary
     limit_new: 1
     interval: 1 days
-    preset:
+    template:
       - movie
