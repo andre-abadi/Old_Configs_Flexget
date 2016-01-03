@@ -18,27 +18,22 @@ templates:
 tasks:
 
   showRSS:
-    rss: http://showrss.info/rss.php?user_id=227669&hd=null&proper=1&magnets=false
+    rss: http://showrss.info/user/6892.rss?magnets=true&namespaces=true&name=clean&quality=sd&re=yes
     series:
-      - Modern Family
-      - Suits
+      - America's Next Top Model
       - Castle (2009)
-      - Downton Abbey
+      - Elementary
       - Game of Thrones
       - Grey's Anatomy
-      - How I Met Your Mother
-      - Mad Men
-      - The Blacklist
-      - The Big Bang Theory
-      - America's Next Top Model
-      - Boardwalk Empire
       - Homeland
-      - Elementary
-      - Scandal (2012)
       - House of Cards (2013)
-      - Glee
-      - MythBusters
+      - Modern Family
+      - Mythbusters
+      - Scandal (2012)
       - Sherlock
+      - Suits
+      - The Big Bang Theory
+      - The Blacklist
       - Top Gear
     template:
       - tvtorrent
