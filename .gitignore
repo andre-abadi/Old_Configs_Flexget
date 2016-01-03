@@ -1,3 +1,5 @@
 db-config.sqlite
 flexget.log
+.config-lock
+received/
 
