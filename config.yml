@@ -15,25 +15,12 @@ templates:
       movedone: /media/Series/%(series_name)s/Season %(series_season)d/
       ratio: 0.0001
       removeatratio: yes
+
 tasks:
 
-  showRSS:
-    rss: http://showrss.info/user/6892.rss?magnets=true&namespaces=true&name=clean&quality=sd&re=yes
+  Castle (2009):
+    rss: http://showrss.info/show/53.rss
     series:
-      - America's Next Top Model
       - Castle (2009)
-      - Elementary
-      - Game of Thrones
-      - Grey's Anatomy
-      - Homeland
-      - House of Cards (2013)
-      - Modern Family
-      - Mythbusters
-      - Scandal (2012)
-      - Sherlock
-      - Suits
-      - The Big Bang Theory
-      - The Blacklist
-      - Top Gear
-    template:
+    preset:
       - tvtorrent
