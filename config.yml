@@ -1,14 +1,13 @@
 templates:
 
   tvtorrent:
-    exists_series: /media/Series/
+    exists_series: '/media/Series/{{series_name}}'
     magnets: no
     deluge:
       username: osiris
       password: osiris
       main_file_only: yes
-      main_file_ratio: 0.85
-      hide_sparse_files: no
+      hide_sparse_files: yes
       keep_subs: no
       automanaged: true
       content_filename: '%(series_name)s - %(series_id)s'
@@ -18,9 +17,72 @@ templates:
 
 tasks:
 
+  Brookyln Nine-Nine:
+    rss: http://showrss.info/show/58.rss
+    series:
+      - Brooklyn Nine-Nine
+    template:
+      - tvtorrent
+
   Castle (2009):
     rss: http://showrss.info/show/53.rss
     series:
       - Castle (2009)
-    preset:
+    template:
+      - tvtorrent
+
+  Elementary:
+    rss: http://showrss.info/show/207.rss
+    series:
+      - Elementary
+    template:
+      - tvtorrent
+
+  Game of Thrones:
+    rss: http://showrss.info/show/262.rss
+    series:
+      - Game of Thrones
+    template:
+      - tvtorrent
+
+  Grey's Anatomy:
+    rss: http://showrss.info/show/9.rss
+    series:
+      - Grey's Anatomy
+    template:
+      - tvtorrent
+
+  Homeland:
+    rss: http://showrss.info/show/107.rss
+    series:
+      - Homeland
+    template:
+      - tvtorrent
+
+  Modern Family:
+    rss: http://showrss.info/show/75.rss
+    series:
+      - Modern Family
+    template:
+      - tvtorrent
+
+  Scandal (US):
+    rss: http://showrss.info/show/13.rss
+    series:
+      - Scandal (US)
+    template:
+      - tvtorrent
+
+  The Big Bang Theory:
+    rss: http://showrss.info/show/48.rss
+    series:
+      - The Big Bang Theory
+    template:
+      - tvtorrent
+
+  The Blacklist:
+    rss: http://showrss.info/show/81.rss
+    series:
+      - The Blacklist
+    template:
       - tvtorrent
