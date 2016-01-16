@@ -23,7 +23,7 @@ templates:
       # Rename the main file to "Elementary - S01E01" while maintaining file extension
       content_filename: '%(series_name)s - %(series_id)s'
       # Move the finished torrent to "Series/Elementary/Season 1"
-      movedone: /media/Series/%(series_name)s/Season %(series_season)/
+      movedone: /media/Series/%(series_name)s/Season %(series_season)s/
       # Finish the torrent on Deluge when this ratio is reached
       ratio: 0.0001
       # Remove the torrent from Deluge when it is finished
@@ -40,25 +40,15 @@ templates:
       - Grey's Anatomy
       - Homeland
       - Modern Family
-      - Narcos
       - Scandal (US)
       - The Big Bang Theory
       - The Blacklist
 
 tasks:
 
-  # Check EZTV's global RSS for the shows
-  EZTV:
-    rss: http://eztv.ag/ezrss.xml
-    template:
-      - tvtorrent
-      - myshows
-    priority: 1
-
   # Then try the personalised showRSS feed
   showRSS:
-    rss: http://showrss.info/user/6892.rss?magnets=true&namespaces=true&name=clean&quality=any&re=yes
+    rss: http://showrss.info/user/6892.rss?magnets=false&namespaces=true&name=clean&quality=any&re=yes
     template:
       - tvtorrent
       - myshows
-    priority: 2
