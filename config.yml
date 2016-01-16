@@ -6,11 +6,9 @@ templates:
       username: osiris
       password: osiris
       main_file_only: yes
-      hide_sparse_files: yes
-      keep_subs: no
       automanaged: true
       content_filename: '%(series_name)s - %(series_id)s'
-      movedone: /media/Series/%(series_name)s/Season %(series_season)d/
+      movedone: /media/Series/%(series_name)s/Season %(series_season)/
       ratio: 0.0001
       removeatratio: yes
       magnetization_timeout: 60
