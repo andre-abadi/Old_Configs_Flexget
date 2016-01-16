@@ -1,86 +1,64 @@
 templates:
 
+  # Check if exists, download using Deluge and auto-move file
   tvtorrent:
+    # Don't use Flexget's internal databse of downloaded shows
+    disable:
+      - seen
+      - seen_info_hash
+      - remember_rejected
+    # Instead, check if the episode already exists in the file system
     exists_series: '/media/Series/{{series_name}}'
+    # Use Deluge torrent client
     deluge:
       username: osiris
       password: osiris
+      # Only download the file that accounts for 90% of the torrent size
+      # Other files are placed in a hidden "." directory
       main_file_only: yes
-      automanaged: true
-      content_filename: '%(series_name)s - %(series_id)s'
-      movedone: /media/Series/%(series_name)s/Season %(series_season)/
-      ratio: 0.0001
-      removeatratio: yes
+      # Wait for file and metadata to be downloaded before other commands
       magnetization_timeout: 60
+      # Comply with Deluge queues
+      automanaged: true
+      # Rename the main file to "Elementary - S01E01" while maintaining file extension
+      content_filename: '%(series_name)s - %(series_id)s'
+      # Move the finished torrent to "Series/Elementary/Season 1"
+      movedone: /media/Series/%(series_name)s/Season %(series_season)/
+      # Finish the torrent on Deluge when this ratio is reached
+      ratio: 0.0001
+      # Remove the torrent from Deluge when it is finished
+      removeatratio: yes
+
+  # Centralised list of TV shows to be downloaded
+  myshows:
+    # Look for the following series in any input plugin
+    series:
+      - Brooklyn Nine-Nine
+      - Castle (2009)
+      - Elementary
+      - Game of Thrones
+      - Grey's Anatomy
+      - Homeland
+      - Modern Family
+      - Narcos
+      - Scandal (US)
+      - The Big Bang Theory
+      - The Blacklist
 
 tasks:
 
-  Brookyln Nine-Nine:
-    rss: http://showrss.info/show/58.rss
-    series:
-      - Brooklyn Nine-Nine
+  # Check EZTV's global RSS for the shows
+  EZTV:
+    rss: http://eztv.ag/ezrss.xml
     template:
       - tvtorrent
+      - myshows
+    priority: 1
 
-  Castle (2009):
-    rss: http://showrss.info/show/53.rss
-    series:
-      - Castle (2009)
+  # Then try the personalised showRSS feed
+  showRSS:
+    rss: http://showrss.info/user/6892.rss?magnets=true&namespaces=true&name=clean&quality=any&re=yes
     template:
       - tvtorrent
-
-  Elementary:
-    rss: http://showrss.info/show/207.rss
-    series:
-      - Elementary
-    template:
-      - tvtorrent
-
-  Game of Thrones:
-    rss: http://showrss.info/show/262.rss
-    series:
-      - Game of Thrones
-    template:
-      - tvtorrent
-
-  Grey's Anatomy:
-    rss: http://showrss.info/show/9.rss
-    series:
-      - Grey's Anatomy
-    template:
-      - tvtorrent
-
-  Homeland:
-    rss: http://showrss.info/show/107.rss
-    series:
-      - Homeland
-    template:
-      - tvtorrent
-
-  Modern Family:
-    rss: http://showrss.info/show/75.rss
-    series:
-      - Modern Family
-    template:
-      - tvtorrent
-
-  Scandal (US):
-    rss: http://showrss.info/show/13.rss
-    series:
-      - Scandal (US)
-    template:
-      - tvtorrent
-
-  The Big Bang Theory:
-    rss: http://showrss.info/show/48.rss
-    series:
-      - The Big Bang Theory
-    template:
-      - tvtorrent
-
-  The Blacklist:
-    rss: http://showrss.info/show/81.rss
-    series:
-      - The Blacklist
-    template:
-      - tvtorrent
+      - myshows
+    priority: 2
